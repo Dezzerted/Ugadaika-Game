@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадайка</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Угадайка</title>
+</head>
+<body>
+    <button id="myBtn">ШАГ 1. Нажать для ввода MIN</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h2>МIN-имальное значение числа для игры</h2>
+            </div>
+            <div class="modal-body">
+                <label>
+                    <input type="text" placeholder="-999" id="inMin">
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button id="btnSave1">Сохранить</button>
+                <button id="btnClose1">Закрыть</button>
+            </div>
+        </div>
+    </div>
+    <button id="myBtn2">ШАГ 2. Нажать для ввода MAX</button>
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h2>MAX-имальное значение числа для игры</h2>
+            </div>
+            <div class="modal-body">
+                <label>
+                    <input type="text" placeholder="999" id="inMax">
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnSave2">Сохранить</button>
+                <button type="button" id="btnClose2">Закрыть</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row game-card align-items-center">
+        <div class="col col-md-4 offset-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    <p class="m-0">Вопрос №<span id="orderNumberField">0</span></p>
+                </div>
+                <div class="card-body">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <h3 class="card-title m-0"><span id="answerField">Вы ничего не загадали!<br>Выполните ШАГ 1 и ШАГ 2!</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="btn-group">
+                        <button class="btn btn-info" id="btnLess">&#129047;<br>Меньше</button>
+                        <button class="btn btn-success btn-lg" id="btnEqual">Верно!</button>
+                        <button class="btn btn-info" id="btnOver">Больше<br>&#129045;</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-link" id="btnRetry">Заново</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
